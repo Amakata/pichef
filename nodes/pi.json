@@ -1,0 +1,31 @@
+{
+    "users": [
+        { "name": "pi", "group": "pi" }
+    ],
+    "authorization": {
+        "sudo": {
+            "groups": ["pi"],
+            "users": ["pi"],
+            "passwordless": true,
+            "sudoers_defaults": [
+                "env_reset",
+				"mail_badpass",
+                "secure_path=\"/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin\"",
+				"env_keep += \"SSH_AUTH_SOCK\""
+            ]
+        }
+    },
+	"openssh": {
+		"client": {
+			"github.com": {
+			     "StrictHostKeyChecking": "no"
+			}
+		}
+	},
+    "run_list":[
+	    "recipe[users]",
+		"recipe[sudo]",
+		"recipe[openssh]",
+        "base"
+    ]
+}
