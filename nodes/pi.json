@@ -57,10 +57,17 @@
 			}
 		}
 	},
+	"devtool": {
+	  "users": [
+	    {"user": "root", "group": "root", "path": "/root"},
+	    {"user": "pi", "group": "pi", "path": "/home/pi"}
+	  ]
+	},
     "run_list":[
 	    "recipe[users]",
 		"recipe[sudo]",
 		"recipe[openssh]",
+		"devtool",
         "base"
     ]
 }
