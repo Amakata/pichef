@@ -20,6 +20,7 @@
       (append '(("\\.rb$" . ruby-mode)) auto-mode-alist))
 (add-to-list 'auto-mode-alist '("Capfile$" . ruby-mode))
 (add-to-list 'auto-mode-alist '("Gemfile$" . ruby-mode))
+(add-to-list 'auto-mode-alist '("Berksfile$" . ruby-mode))
 (add-to-list 'auto-mode-alist '("Vagrantfile$" . ruby-mode))
 
 (setq interpreter-mode-alist (append '(("ruby" . ruby-mode))
