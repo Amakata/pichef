@@ -57,6 +57,14 @@
 			}
 		}
 	},
+    "base": {
+      "wifi": [
+        {
+		  "ssid": "",
+		  "psk": "",
+		}
+	  ]
+	},
 	"devtool": {
 	  "users": [
 	    {"user": "root", "group": "root", "path": "/root"},

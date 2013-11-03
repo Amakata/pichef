@@ -7,6 +7,22 @@
 # All rights reserved - Do Not Redistribute
 #
 
+# 無線LAN設定
+
+template "/etc/network/interfaces" do
+ mode "0644"
+ user "root"
+ group "root"
+ source "interfaces"
+end
+
+template "/etc/wpa_supplicant/wpa_supplicant.conf" do
+ mode "0600"
+ user "root"
+ group "root"
+ source "wpa_supplicant.conf"
+end
+
 # opencv 関連
 %w{python-opencv python-scipy python-numpy python-pip python-pygame}.each do |pkg|
  package pkg do
