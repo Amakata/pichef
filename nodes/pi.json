@@ -57,11 +57,14 @@
 			}
 		}
 	},
+	"ntp": {
+	    "servers": ["ntp.nict.jp", "ntp.jst.mfeed.ad.jp"]
+	},
     "base": {
       "wifi": [
         {
-		  "ssid": "",
-		  "psk": "",
+		  "ssid": "zefiroworld",
+		  "psk": "zefirosekai"
 		}
 	  ]
 	},
@@ -75,6 +78,7 @@
 	    "recipe[users]",
 		"recipe[sudo]",
 		"recipe[openssh]",
+		"recipe[ntp]",
 		"devtool",
         "base"
     ]
